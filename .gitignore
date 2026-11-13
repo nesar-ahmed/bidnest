@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# turbo
+.turbo/
+
+# local database & env
+data/
+apps/api/bidnest.db
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+.env
+.env.*
+!.env.example
+
+# misc
+coverage/
+.DS_Store
+logs/
+*.log
+
+# private notes - never push to GitHub
+guide.md

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.next/
+.turbo/
+coverage/
+package-lock.json
+
+# local state and generated files
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# private notes
+guide.md

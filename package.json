@@ -1,0 +1,39 @@
+{
+  "name": "bidnest",
+  "private": true,
+  "packageManager": "npm@11.13.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:migrate": "npm run db:migrate -w @bidnest/api",
+    "db:migration:generate": "npm run db:migration:generate -w @bidnest/api",
+    "db:migration:create": "npm run db:migration:create -w @bidnest/api",
+    "db:migrate:revert": "npm run db:migrate:revert -w @bidnest/api",
+    "db:seed": "npm run db:seed -w @bidnest/api",
+    "db:reset": "npm run db:reset -w @bidnest/api",
+    "db:show": "npm run db:show -w @bidnest/api"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^15.5.29",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.10.1",
+    "turbo": "^2.5.0",
+    "typescript-eslint": "^8.72.2"
+  }
+}
