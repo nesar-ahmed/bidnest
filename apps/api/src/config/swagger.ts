@@ -1,5 +1,6 @@
 import type { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { swaggerAuthCss, swaggerAuthScript } from './swagger-auth';
 
 // DTO schemas are generated at build time by the @nestjs/swagger CLI plugin (nest-cli.json).
 export function setupSwagger(app: INestApplication): void {
@@ -23,6 +24,9 @@ export function setupSwagger(app: INestApplication): void {
 
   SwaggerModule.setup('api/docs', app, document, {
     jsonDocumentUrl: 'api/docs/json',
-    swaggerOptions: { persistAuthorization: true, displayRequestDuration: true },
+    customSiteTitle: 'Bidnest API docs',
+    customCss: swaggerAuthCss,
+    customJsStr: swaggerAuthScript,
+    swaggerOptions: { withCredentials: true, displayRequestDuration: true },
   });
 }

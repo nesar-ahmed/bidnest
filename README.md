@@ -101,7 +101,9 @@ Swagger/OpenAPI is generated from the controllers and DTOs at build time by the
 `@nestjs/swagger` CLI plugin configured in `apps/api/nest-cli.json`. In code you
 only add `@ApiTags` / `@ApiCookieAuth`; validation rules from `class-validator`
 become schema constraints automatically. Run the API and open
-`http://localhost:4000/api/docs`.
+`http://localhost:4000/api/docs`. Use the **Sign in to test** button with a
+seeded account; it sets the same httpOnly cookies as the web app, so protected
+operations work without pasting a token or cookie.
 
 ## Testing
 
