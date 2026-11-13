@@ -1,0 +1,9 @@
+{
+  "extends": "@bidnest/config-typescript/nestjs.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "noEmit": false
+  },
+  "include": ["src"]
+}
